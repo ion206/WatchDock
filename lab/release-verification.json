@@ -1,0 +1,64 @@
+{
+  "recordedAt": "2026-10-24T05:33:10.077864+00:00",
+  "releaseTests": {
+    "tests/test_safety.py": {
+      "exit": 0,
+      "stdout": "38 passed, 0 failed"
+    },
+    "tests/test_release.py": {
+      "exit": 0,
+      "stdout": "8 passed, 0 failed"
+    }
+  },
+  "featuredScenarioRun": {
+    "id": "20261023-215950",
+    "passed": 15,
+    "total": 15,
+    "runtime": "dockersim process-based emulator; not Docker containers",
+    "model": "claude-sonnet-5",
+    "status": "completed"
+  },
+  "sourceNote": "Final release passed 46 deterministic checks plus the full-loop relapse regression. The 15/15 Sonnet run was before the final release-path patches; do not represent it as a full-suite rerun of the exact release hash.",
+  "unverified": [
+    "real Docker Engine/Compose/Traefik",
+    "SSH deployment on real Pi/VM",
+    "Factory Droid model session",
+    "long-term health and tail-latency SLO compliance"
+  ],
+  "files": {
+    "watchdock.py": "7064e5cf33a0b258a522adeee88d916d808de55b3bc74b895a257102dd96bc4a",
+    "controller.py": "632512910a2f23bc507fbb5307f0a86bc328118a55923ce2455e2e056aa6db0d",
+    "brains.py": "7b368e4807f7c5099f29943704f315560e5ae960aee51d2a68d5cdf1018d5c15",
+    "toolbox.py": "75838c5e12e0d05f43905e894f6142ba62172093f0818fbe0750925bcc04e4f0",
+    "guardrails.py": "cdfae603fe8ab4923838945237fab6579cb432ca96055362a3708009f42a8937",
+    "composepatch.py": "af967771017f705c743987dff50062f34b75df4054d3aaf4ef9c05f88017123e",
+    "deploy.py": "44ced0b96cc69c0c903e9d8023b6be0b28208499b5914e3d530fd1c83a32a723",
+    "edge.py": "b87efddf872aa3b5e2ccb5bf64255c050f13657889b805dd94b67e689ab22992",
+    "telemetry.py": "a5428a45457ed3a53d19e777cfcce9f68199f836dc66ff22e6b1f171fe5f2aab",
+    "prober.py": "2ba8864765b58271f119caa0544d869ddb7baf4e36cb6434fd3229a0c045bf20",
+    "forwarder.py": "731036ac9b8a59c62f75340faf23f0825185851d8b6776874ae38a0aa83a5c8f",
+    "bridge.py": "4e045684a14946e909a66b8719816ceeb8a498ac41aa64f5f5ef7f990dc80173",
+    "lab/dockersim.py": "899367ed48396dc6c9d70744140bfb090bc1a3af0713a1a145ab310f69d1fac9",
+    "lab/run_lab.py": "e3dbab1a05fa5cf2d9c4a04978cb6b3cfa46912587cde9e75898656ebd8ee171",
+    "lab/loadgen.py": "fe48edef53abb3b1596343aa7b6b876288ef3f143d0dbcbe2722bd183204753c",
+    "lab/apps/svc.py": "46a33dd242c786b92de3babff88fc471c71d7f00149089fcbf466e20551f14e9",
+    "tests/test_safety.py": "1f527e9df40a53cd0c18323f0d196fe568c1624aff61497cb451aca0e91f0d95",
+    "README.md": "2d6bf524fba86a58e1e2eb22ae681786cfb868d8f8c26ec09b886b754f3f4502",
+    "requirements.txt": "a9005c53f03a03aa336f9d6a18811f0993ac4319a7b4806630afb5b96afd9889",
+    "tests/test_release.py": "af99487649cce1229dc78b624642484434edbf293c3f3ef5286f121e7e7e905c"
+  },
+  "releaseRelapseRegression": {
+    "run": "20261023-223029",
+    "passed": 1,
+    "total": 1,
+    "runtime": "dockersim",
+    "brain": "scripted"
+  },
+  "modelComparison": {
+    "run": "20261023-221705",
+    "model": "claude-haiku-4-5",
+    "passed": 9,
+    "total": 10,
+    "knownFailure": "Unbounded-cache leak temporarily masked; OOM after resolution"
+  }
+}

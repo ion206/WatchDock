@@ -1,0 +1,8 @@
+docker>=7
+websockets>=13
+foxglove-sdk>=0.30
+pyyaml
+ruamel.yaml>=0.18
+aiohttp>=3.9
+requests
+droid-sdk[mcp]>=0.5
